@@ -1,0 +1,16 @@
+关键词操作
+
+1. POST
+curl -X POST http://localhost:8088/words --header 'Content-Type:application/json' --data '[{"cate_id":21 ,"name":"asdf"},{"cate_id":21,"name":"zxcv"}]'
+
+2. DELETE
+curl -X DELETE http://localhost:8088/words/16207,16208
+
+3. GET
+按照类别查询关键字
+curl -X GET http://localhost:8088/words/21
+查询所有关键字
+curl -X GET http://localhost:8088/words/all
+
+4. POST
+curl -X POST http://localhost:8088/words/update --header 'Content-Type:application/json' --data '[{"id":16209,"name":"qqqq"},{"id":16210,"name":"qwer"}]'

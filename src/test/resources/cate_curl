@@ -1,0 +1,13 @@
+类别操作
+
+1. POST
+curl -X POST http://localhost:8088/category --header 'Content-Type:application/json' --data '[{"name":"asdf"},{"name":"zxcv"}]'
+
+2. DELETE
+curl -X DELETE http://localhost:8088/category/19,20
+
+3. GET
+curl -X GET http://localhost:8088/category/all
+
+4. POST
+curl -X POST http://localhost:8088/category/update --header 'Content-Type:application/json' --data '[{"cate_id":21,"name":"qqqq"},{"cate_id":22,"name":"qwer"}]'
