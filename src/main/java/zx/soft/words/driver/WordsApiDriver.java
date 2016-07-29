@@ -1,10 +1,10 @@
 package zx.soft.words.driver;
 
-import zx.soft.words.api.WordsApiApplication;
 import zx.soft.utils.driver.ProgramDriver;
+import zx.soft.words.api.WordsApiApplication;
 
 public class WordsApiDriver {
-	
+
 	/**
 	 * 主函数
 	 */
@@ -12,7 +12,7 @@ public class WordsApiDriver {
 		int exitCode = -1;
 		ProgramDriver pgd = new ProgramDriver();
 		try {
-			// 运行在hefeiXX机器上
+			// 运行在hefei07机器上
 			pgd.addClass("wordsApiApplication", WordsApiApplication.class, "负面词库CURD接口服务");
 			pgd.driver(args);
 			// Success

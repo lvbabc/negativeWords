@@ -10,4 +10,4 @@
 
 > 启动方式： bin/ctl.sh start wordsApiApplication
 
-> 端口：8088
+> 端口：8086

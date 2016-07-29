@@ -13,6 +13,10 @@
 
 	<context:component-scan base-package="zx.soft.words.controller" />
 	<context:component-scan base-package="zx.soft.words.service" />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
 	<!-- mapper -->
 	<bean id="baseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"

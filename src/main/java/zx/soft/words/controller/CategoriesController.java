@@ -19,10 +19,10 @@ import zx.soft.words.service.CategoriesService;
 @Controller
 @RequestMapping("/category")
 public class CategoriesController {
-	
+
 	@Inject
 	private CategoriesService categoriesServer;
-	
+
 	/**
 	 * 添加类别
 	 */
@@ -31,7 +31,7 @@ public class CategoriesController {
 	public @ResponseBody Object addCategory(@RequestBody List<Categories> categories) {
 		return categoriesServer.addCategory(categories);
 	}
-	
+
 	/**
 	 * 删除类别
 	 */
@@ -44,12 +44,12 @@ public class CategoriesController {
 	/**
 	 * 查询所有类别
 	 */
-	@RequestMapping(value = "/all",method = RequestMethod.GET)
+	@RequestMapping(value = "/{type}", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	public @ResponseBody List<Categories> getCategories() {
-		return categoriesServer.getCategories();
+	public @ResponseBody List<Categories> getCategories(@PathVariable String type) {
+		return categoriesServer.getCategories(type);
 	}
-	
+
 	/**
 	 * 修改类别
 	 */
